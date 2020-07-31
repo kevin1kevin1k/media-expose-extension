@@ -7,6 +7,16 @@
       "scripts": ["background.js"],
       "persistent": true
     },
+    "content_scripts": [{
+      "js": ["contentScript.js"],
+      "run_at": "document_idle",
+      "matches": [
+        "*://news.ltn.com.tw/*",
+        "*://tw.appledaily.com/*",
+        "*://www.chinatimes.com/*",
+        "*://udn.com/*"
+      ]
+    }],
     "page_action": {
       "default_popup": "popup.html",
       "default_icon": {
@@ -24,3 +34,4 @@
     },
     "manifest_version": 2
 }
+
