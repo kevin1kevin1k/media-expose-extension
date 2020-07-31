@@ -2,10 +2,10 @@
     "name": "MediaExpose",
     "version": "1.0",
     "description": "Let's expose the media!",
-    "permissions": ["webRequest", "activeTab", "declarativeContent", "storage", "<all_urls>"],
+    "permissions": ["declarativeContent", "storage"],
     "background": {
       "scripts": ["background.js"],
-      "persistent": true
+      "persistent": false
     },
     "content_scripts": [{
       "js": ["contentScript.js"],
