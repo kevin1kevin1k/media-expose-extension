@@ -16,9 +16,10 @@ chrome.storage.sync.get(['domain'], async (data) => {
   let url = 'https://media-expose.wancat.cc/api/media?domain=' + domain;
   let response = await fetch(url, {method: 'get'});
   let info = await response.json();
-  console.log(info);
-  let company = info[0]['Company'];
-  text1.innerHTML = `${company['Name']} (${info[0]['Country']})`;
+  let media = info[0];
+  console.log(media);
+  let company = media['Company'];
+  text1.innerHTML = `${company['Name']} (${media['Country']})`;
   text2.innerHTML = company['Owner'];
   text3.innerHTML = company['Note'];
 });
