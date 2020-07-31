@@ -9,8 +9,13 @@ var map = {
 
 let text1 = document.getElementById('text1');
 let text2 = document.getElementById('text2');
-chrome.storage.sync.get('domain', (data) => {
-  var domain = data.domain;
-  text1.innerHTML = domain;
-  text2.innerHTML = map[domain];
+chrome.storage.sync.get('domain', async (data) => {
+  let domain = data.domain;
+  let url = 'https://media-expose.wancat.cc/api/media?domain=' + domain;
+  let response = await fetch(url, {method: 'get'});
+  let info = await response.json();
+  console.log(info);
+  let company = info[0]['Company'];
+  text1.innerHTML = company['Name'];
+  text2.innerHTML = company['Note'];
 });
