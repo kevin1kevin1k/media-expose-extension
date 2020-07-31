@@ -1,5 +1,5 @@
-var author = document.getElementsByClassName("author")[0];
+// var author = document.getElementsByClassName("author")[0];
 chrome.storage.sync.set({
   domain: document.domain,
-  author: author.innerHTML
+  // author: author.children[0].href
 });

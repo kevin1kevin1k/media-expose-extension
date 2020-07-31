@@ -1,19 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <style>
-      body {
-        min-width: 320px;
-        min-height: 240px;
-      }
-    </style>
-  </head>
-  <body>
-    <p id="text1">default1</p>
-    <p id="text2">default2</p>
-    <p id="text3">default3</p>
-    <p id="text4">default4</p>
-    <script src="popup.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap&subset=chinese-traditional');
+    body {
+      min-width: 600px;
+      min-height: 300px;
+      padding: 10px;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    .button {
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      padding: 8px 10px;
+      border: 1px solid #5e6270;
+      border-radius: 8px;
+      background: #989fb6;
+      background: -webkit-gradient(linear, left top, left bottom, from(#989fb6), to(#5e6270));
+      background: -moz-linear-gradient(top, #989fb6, #5e6270);
+      background: linear-gradient(to bottom, #989fb6, #5e6270);
+      text-shadow: #3b3d46 1px 1px 1px;
+      font: normal normal bold 16px arial;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .button:hover, .button:focus {
+      border: 1px solid ##757a8c;
+      background: #b6bfda;
+      background: -webkit-gradient(linear, left top, left bottom, from(#b6bfda), to(#717686));
+      background: -moz-linear-gradient(top, #b6bfda, #717686);
+      background: linear-gradient(to bottom, #b6bfda, #717686);
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .button:active {
+      background: #5e6270;
+      background: -webkit-gradient(linear, left top, left bottom, from(#5e6270), to(#5e6270));
+      background: -moz-linear-gradient(top, #5e6270, #5e6270);
+      background: linear-gradient(to bottom, #5e6270, #5e6270);
+    }
+    .button:before {
+      content: "\0000a0";
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+      line-height: 24px;
+      margin: 0 4px -6px -4px;
+      position: relative;
+      top: 0px;
+      left: 0px;
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAB3UlEQVRIiZ3VsYoUQRAG4G/HZRE5FhGRRQ49E2NDX0BQUTDQ3OAiAxED8RXEQHwAAxERMRAjkYsUDI8LjM5A1MBADhHlEpfdNZievZ6enrnRgmK6e/7566/q6mko9LPiH8dgiHl4Mc8A4nd9LSu4U8U+mM4KHAjPRbS2yAExiN4NcArXwvxbV5DU+ig9gpch4CZOZDC1hbY022o/xCSMj+JghC968GYtzeYMHuJ8BrcMMFTvoFRxoUz/eVAd2088xrskeMVR42ur9RiPMMUMu8q6V76L9a4MdFiBO4HoLka4ngRY4HfAjVpENiJWfhZf8AorWMNWRDzDbbwNQZ7iKlYTntY0rihrvBbm64nyzfDtKu7bK+Mt/9lFryPyqWbtY1sSD6NJ7l8U27Fo/Ae/IrK4c2pBYvLqGXu1NlJv00O43CEm5uxlY3xQlueZsj1nON2C79VFsU+wraz9BBsh2APN9qz5QPMEj3ETJ6O1w7iInbB+CS/wHefwMaO8dU+PB4VTzUO1ETAreBLW7mU4lsQD+S6aBE8V7OCzvZ/de3zFBXxqU5ymltuDHIby9E5xow3TdqOlTpltdatV4y38wBvlfsS3XvZmjBW3qd5vXMs6TX+eAFOCPlYd0gLzv0+Vd5rSSUbIAAAAAElFTkSuQmCC") no-repeat left center transparent;
+      background-size: 100% 100%;
+    }
+    p {
+      color: #323439;
+    }
+    span {
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="block">
+    <span >網域：</span>
+    <span id="text1">網域</span><br>
+    <span >媒體名稱：</span>
+    <span id="text2">名稱</span><br>
+    <span >所屬國家：</span>
+    <span id="text3">國家</span><br>
+    <span >所屬公司：</span>
+    <span id="text4">集團</span><br>
+    <span >公司擁有人：</span>
+    <span id="text5">擁有人</span><br>
+    <span >是否有中資：</span>
+    <span id="text6">否</span><br>
+    <!-- <span >作者：</span> -->
+    <!-- <span id="text7">李鈺昇</span><br> -->
+    <br>
+    <a class="button" href="#" id="button" target="_blank">前往平台查詢更多</a>
+  </div>
+
+</body>
+  <script src="popup.js"></script>
 </html>
