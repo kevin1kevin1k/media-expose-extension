@@ -29,7 +29,7 @@ chrome.storage.sync.get(['domain'], async (data) => {
   text4.innerHTML = company['Name'];
   text5.innerHTML = company['Owner'];
   text6.innerHTML = company['invested_by_china'] ? '是' : '否';
-  button.href = `https://media-expose.wancat.cc/media/${media['company_id']}`;
+  button.href = `https://media-expose.wancat.cc/media/${media['ID']}`;
 });
 
 // chrome.storage.sync.get('author', (data) => {
