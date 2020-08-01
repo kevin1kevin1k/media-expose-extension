@@ -11,13 +11,7 @@
       "js": ["contentScript.js"],
       "run_at": "document_idle",
       "matches": [
-        "*://news.ltn.com.tw/*",
-        "*://tw.appledaily.com/*",
-        "*://www.chinatimes.com/*",
-        "*://udn.com/*",
-        "*://news.tvbs.com.tw/*",
-        "*://www.setn.com/*",
-        "*://news.ebc.net.tw/*"
+        "*://*/*"
       ]
     }],
     "page_action": {
