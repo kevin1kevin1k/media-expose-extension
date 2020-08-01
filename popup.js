@@ -7,7 +7,7 @@ let text4 = document.getElementById('text4');
 let text5 = document.getElementById('text5');
 let text6 = document.getElementById('text6');
 let button = document.getElementById('button');
-chrome.storage.sync.get(['domain'], async (data) => {
+chrome.storage.local.get(['domain'], async (data) => {
   let domain = data.domain;
   let url = `https://media-expose.wancat.cc/api/media?domain=${domain}`;
   let response = await fetch(url, {method: 'get'});
@@ -25,7 +25,7 @@ chrome.storage.sync.get(['domain'], async (data) => {
   button.href = `https://media-expose.wancat.cc/media/${media['ID']}`;
 });
 
-// chrome.storage.sync.get('author', (data) => {
+// chrome.storage.local.get('author', (data) => {
 //   let author = data.author;
 //   text7.innerHTML = author;
 //   console.log(author);
